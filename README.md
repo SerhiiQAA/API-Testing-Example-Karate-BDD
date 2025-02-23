@@ -31,7 +31,7 @@ Here's an example of a BDD-style test scenario written with Karate:
 Feature: Add a new todo
 
   Scenario: Add a new todo
-    Given url 'https://dummyjson.com/todos/add'
+    Given url '/add'
     And request { todo: 'Use DummyJSON in the project', completed: false, userId: 5 }
     When method post
     Then status 201
