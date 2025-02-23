@@ -19,7 +19,9 @@ Scenario: Get a random todo
     Then status 200
 
 Scenario: Limit and skip todos
-    Given url 'https://dummyjson.com/todos?limit=3&skip=10'
+    Given path ''
+    And param limit = 3
+    And param skip = 10
     When method Get
     Then status 200
 
