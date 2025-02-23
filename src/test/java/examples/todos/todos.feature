@@ -30,4 +30,5 @@ Scenario: Add a new todo
     And request { todo: 'Use DummyJSON in the project', completed: false, userId: 5 }
     When method Post
     Then status 201
+    * def toDosId = response.id
     And print response
